@@ -1,0 +1,51 @@
+﻿<UserControl x:Class="Lib_App.Views.BookManagement"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Lib_App.Views"
+             mc:Ignorable="d" 
+             xmlns:view ="clr-namespace:Lib_App.Views"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+             TextElement.FontWeight="Regular"
+             TextElement.FontSize="13"
+             TextOptions.TextFormattingMode="Ideal"
+             TextOptions.TextRenderingMode="Auto"
+             Background="{DynamicResource MaterialDesignPaper}"
+             FontFamily="{DynamicResource MaterialDesignFont}"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Background="White">
+        <Border Background="#001d37">
+            <TabControl>
+                <TabItem Style="{StaticResource TabItemStyle1}" Width="200" Padding="0">
+                    <TabItem.Header>
+                        <HeaderedContentControl Content="Tác giả"
+                                                />
+                    </TabItem.Header>
+                    <view:TacGia/>
+                </TabItem>
+                <TabItem Style="{StaticResource TabItemStyle1}" Width="200">
+                    <TabItem.Header>
+                        <HeaderedContentControl Content="Thể loại"                                              />
+                    </TabItem.Header>
+                    <view:TheLoai/>
+                </TabItem>
+                <TabItem Style="{StaticResource TabItemStyle1}" Width="200">
+                    <TabItem.Header>
+                        <HeaderedContentControl Content="Nhà xuất bản"
+                                               />
+                    </TabItem.Header>
+                    <view:NhaXuatBan/>
+                </TabItem>
+                <TabItem Style="{StaticResource TabItemStyle1}" Width="200">
+                    <TabItem.Header>
+                        <HeaderedContentControl Content="Book"
+                                               />
+                    </TabItem.Header>
+                    <view:BookView/>
+                </TabItem>
+            </TabControl>
+        </Border>
+    </Grid>
+</UserControl>
